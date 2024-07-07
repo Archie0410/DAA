@@ -1,0 +1,14 @@
+class Solution:
+    def numberOfSteps(self, num: int) -> int:
+        def recursive_steps(n, steps=0):
+            if n == 0:
+                return steps
+            elif n % 2 == 0:
+                return recursive_steps(n // 2, steps + 1)
+            else:
+                return recursive_steps(n - 1, steps + 1)
+        
+        return recursive_steps(num)
+
+solution = Solution()
+print(solution.numberOfSteps(14))  # Output: 6

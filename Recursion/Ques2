@@ -1,0 +1,8 @@
+def get_product(n, product=1):
+    if n == 0:
+        return product
+    else:
+        return get_product(n // 10, product * (n % 10))
+
+n = int(input("Enter the Digit:"))
+print(get_product(n))

@@ -1,0 +1,13 @@
+def recursive_binary(n):
+    if n > 1:
+        recursive_binary(n // 2)
+    print(n % 2, end='')
+
+def decimal_to_binary(n):
+    if n == 0:
+        return '0'
+    else:
+        return recursive_binary(n)
+
+digit = int(input("Enter a decimal number: "))
+print("Binary representation:", decimal_to_binary(digit))

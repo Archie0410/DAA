@@ -1,0 +1,8 @@
+def recursive_length(s, length=0):
+    if not s:
+        return length
+    return recursive_length(s[1:], length + 1)
+
+my_string = "Design & Analysis of Algorithm"
+length = recursive_length(my_string)
+print(f"Length of the string: {length}")
