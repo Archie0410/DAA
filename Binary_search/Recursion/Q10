@@ -1,0 +1,16 @@
+def reverse_string(s):
+    if len(s) == 0:
+        return s
+    else:
+        return reverse_string(s[1:]) + s[0]
+
+def is_palindrome(s):
+    s = s.lower()
+    reversed_s = reverse_string(s)
+    return s == reversed_s
+
+str = "Hello"
+if is_palindrome(str):
+    print(f"String {str} is a palindrome.")
+else:
+    print(f"String {str} is not a palindrome.")

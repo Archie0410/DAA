@@ -1,0 +1,8 @@
+def sum_natural_numbers(n):
+    if n <= 1:
+        return n
+    else:
+        return n + sum_natural_numbers(n-1)
+
+n = int(input("Please enter the number till you want to find sum: "))
+print(sum_natural_numbers(n))

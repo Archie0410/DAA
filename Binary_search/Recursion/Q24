@@ -1,0 +1,17 @@
+def find_min_rec(arr, index=0):
+    if index == len(arr) - 1:
+        return arr[index]
+    else:
+        return min(arr[index], find_min_rec(arr, index + 1))
+
+def find_max_rec(arr, index=0):
+    if index == len(arr) - 1:
+        return arr[index]
+    else:
+        return max(arr[index], find_max_rec(arr, index + 1))
+
+
+if __name__ == '__main__':
+    arr = [1, 4, 45, 6, -50, 10, 2]
+    print(find_min_rec(arr))  # Output: -50
+    print(find_max_rec(arr))  # Output: 45
